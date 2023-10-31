@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source .envrc
+# source .envrc
 
 MIGRATION_NAME=$1
 

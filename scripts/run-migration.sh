@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-source .envrc
+# source .envrc
 node_modules/.bin/sequelize db:migrate
