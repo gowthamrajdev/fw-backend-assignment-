@@ -1,4 +1,4 @@
-import OrderDetails from "../../models/order-details"
+import OrderDetails from "../../models/order-details";
 
 const getOrderDetails = (customerId) => {
     return OrderDetails.findAll({where: {customerId}});
