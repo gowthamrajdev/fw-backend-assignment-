@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     getCustomerDetails()
     .then(allCustomerDetails => {
         res.json(allCustomerDetails)
-    })
+    }).catch(err => next(err));
 });
 
 module.exports = router;

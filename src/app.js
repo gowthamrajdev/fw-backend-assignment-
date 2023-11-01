@@ -4,8 +4,9 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import session from 'express-session';
 
-var indexRouter = require('./routes/index');
-var customerDetailsRouter = require('./routes/customer-details');
+const indexRouter = require('./routes/index');
+const customerDetailsRouter = require('./routes/customer-details');
+const orderDetailsRouter = require('./routes/order-details');
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/customer-details', customerDetailsRouter);
+app.use('/order-details', orderDetailsRouter);
 
 
 export default app;
