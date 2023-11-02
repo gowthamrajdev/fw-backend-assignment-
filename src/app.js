@@ -3,6 +3,8 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import session from 'express-session';
+var https = require('https');
+var fs = require('fs');
 
 const indexRouter = require('./routes/index');
 const customerDetailsRouter = require('./routes/customer-details');
@@ -22,6 +24,18 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.listen(port, () => {
     console.log(`server started at http://localhost:${ port }`);
+});
+
+var options = {
+    key: fs.readFileSync('/etc/ssl/private/private.key'),
+    cert: fs.readFileSync('/etc/ssl/private/certificate..crt'),
+    requestCert: false,
+    rejectUnauthorized: false
+};
+
+
+var server = https.createServer(options, app).listen(port, function(){
+    console.log(`server started at port ${port}`);
 });
 app.get('/ping', (req, res) => {
     res.send('pong');
