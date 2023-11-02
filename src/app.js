@@ -9,6 +9,7 @@ const customerDetailsRouter = require('./routes/customer-details');
 const orderDetailsRouter = require('./routes/order-details');
 
 const app = express();
+const port = 80;
 
 app.use(session({ secret: 'MYSECRET',saveUninitialized: false, resave: false, cookie: {secure: false} })); 
 
@@ -17,6 +18,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
+
+
+app.listen(port, () => {
+    console.log(`server started at http://localhost:${ port }`);
+});
+app.get('/ping', (req, res) => {
+    res.send('pong');
+});
 
 
 app.use(function(req, res, next) {
