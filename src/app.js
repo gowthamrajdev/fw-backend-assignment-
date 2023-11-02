@@ -12,7 +12,7 @@ const orderDetailsRouter = require('./routes/order-details');
 
 const app = express();
 const port = 443;
-const IP = '51.20.92.174';
+const IP = '0.0.0.0';
 
 app.use(session({ secret: 'MYSECRET',saveUninitialized: false, resave: false, cookie: {secure: false} })); 
 
@@ -23,9 +23,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
 
-app.listen(port, () => {
-    console.log(`server started at http://localhost:${ port }`);
-});
+// app.listen(port, () => {
+//     console.log(`server started at http://localhost:${ port }`);
+// });
 
 var options = {
     key: fs.readFileSync('/home/ubuntu/fw-backend-assignment-/private.key'),
