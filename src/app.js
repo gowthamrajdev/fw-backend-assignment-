@@ -9,7 +9,7 @@ const customerDetailsRouter = require('./routes/customer-details');
 const orderDetailsRouter = require('./routes/order-details');
 
 const app = express();
-const port = 80;
+const port = 3000;
 
 app.use(session({ secret: 'MYSECRET',saveUninitialized: false, resave: false, cookie: {secure: false} })); 
 
