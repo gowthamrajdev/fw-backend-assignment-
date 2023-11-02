@@ -28,8 +28,8 @@ app.listen(port, () => {
 });
 
 var options = {
-    key: fs.readFileSync('/etc/ssl/private/private.key'),
-    cert: fs.readFileSync('/etc/ssl/private/certificate.crt'),
+    key: fs.readFileSync('/home/ubuntu/fw-backend-assignment-/private.key'),
+    cert: fs.readFileSync('/home/ubuntu/fw-backend-assignment-/certificate.crt'),
     requestCert: false,
     rejectUnauthorized: false
 };
