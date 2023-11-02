@@ -12,6 +12,7 @@ const orderDetailsRouter = require('./routes/order-details');
 
 const app = express();
 const port = 443;
+const IP = '51.20.92.174';
 
 app.use(session({ secret: 'MYSECRET',saveUninitialized: false, resave: false, cookie: {secure: false} })); 
 
@@ -28,13 +29,13 @@ app.listen(port, () => {
 
 var options = {
     key: fs.readFileSync('/etc/ssl/private/private.key'),
-    cert: fs.readFileSync('/etc/ssl/private/certificate..crt'),
+    cert: fs.readFileSync('/etc/ssl/private/certificate.crt'),
     requestCert: false,
     rejectUnauthorized: false
 };
 
 
-var server = https.createServer(options, app).listen(port, function(){
+var server = https.createServer(options, app).listen(port, IP,  function(){
     console.log(`server started at port ${port}`);
 });
 app.get('/ping', (req, res) => {
