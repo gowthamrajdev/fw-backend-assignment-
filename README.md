@@ -7,7 +7,7 @@
 ## Run Migrations
  Step 1: Run Up Migrations: `./scripts/run-migration.sh`
  
- Note: Use Down Migrations  `./scripts/undo-migration.sh` is you want to UNDO.    
+ Note: Use Down Migrations  `./scripts/undo-migration.sh` if you want to UNDO.    
 
 ## Database setup
    
@@ -35,7 +35,6 @@ dev - `npm run watch`
 Server port: http://localhost:3000
 
 -- For Development:
-
 Create new Migrations: `./scripts/create-migration.sh $migration-name`
 
 ## Important Note:
@@ -60,4 +59,4 @@ Step 5: Reload/Restart the app `pm2 logs fw-demo`
 
 SSL setup:
 
-App is using openSSL for certificates, Setting up SSL from the express js, Please check `app.js` file form `/src` dirctory. Refer the comments to enable the `server` code to read SSL certificate. 
+App is using openSSL certificates, Setting up SSL from the express js, Please check `app.js` file form `/src` dirctory. Refer the comments to enable the `server` code to read SSL certificate locally. 
