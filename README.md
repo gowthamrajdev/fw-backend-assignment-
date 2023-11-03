@@ -28,6 +28,7 @@ step 5: Create User Password
 step 6: User and DB mapping       
         `grant all privileges on database freshdesk to freshdeskdb;`
 
+Refer `mock_data_setup.sql` to add sample mock data to customers and order details. 
 
 ## Start
 dev - `npm run watch`
@@ -37,8 +38,16 @@ Server port: http://localhost:3000
 -- For Development:
 Create new Migrations: `./scripts/create-migration.sh $migration-name`
 
+## Below are the API:
+All Customer details: `$base_url/customer-details`
+Customer details by phone number: `$base_url/customer-details?phoneNumber=$number`
+Order details: customerId: `$base_url/order-details?customerId=1`
+
 ## Important Note:
 This app in already Running in AWS EC2 instance.UI is also using the API served from AWS.
+
+
+--------------------------------------------------------------------------------------------
 
 
 ### Details of AWS hosting:
