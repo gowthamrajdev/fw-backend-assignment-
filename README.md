@@ -61,12 +61,17 @@ IP: 51.20.92.174
 App is running in `port 443` in the instance and using `PM2` service for backgroud process,Below are the steps to see the App status.
 
 Step 1: Connect to EC2 instance
+
 Step 2: `sudo su` - admin user
+
 Step 3: All pm2 service status `pm2 status`
+
 Step 4: check app logs using `pm2 logs fw-demo`
+
 Step 5: Reload/Restart the app `pm2 logs fw-demo` 
 
 
-SSL setup:
+
+### SSL setup:
 
 App is using openSSL certificates, Setting up SSL from the express js, Please check `app.js` file form `/src` dirctory. Refer the comments to enable the `server` code to read SSL certificate locally. 
