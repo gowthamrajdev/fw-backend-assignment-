@@ -55,6 +55,7 @@ This app in already Running in AWS EC2 instance.UI is also using the API served 
 Node App is Already deployed and running in `AWS EC2 (ubuntu 20)` instance.
 
 Domain: https://ec2-51-20-92-174.eu-north-1.compute.amazonaws.com
+
 IP: 51.20.92.174
 
 App is running in `port 443` in the instance and using `PM2` service for backgroud process,Below are the steps to see the App status.
